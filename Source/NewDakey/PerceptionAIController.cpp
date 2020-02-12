@@ -15,10 +15,8 @@ APerceptionAIController::APerceptionAIController()
 	{
 		//Perception
 		PerceptionComp->ConfigureSense(*SightConfig);
-		PerceptionComp->SetDominantSense(SightConfig->GetSenseImplementation());
-
 		PerceptionComp->ConfigureSense(*HearingConfig);
-		PerceptionComp->SetDominantSense(HearingConfig->GetSenseImplementation());
+		PerceptionComp->SetDominantSense(SightConfig->GetSenseImplementation());
 
 		//Sight
 		SightConfig->SightRadius = 2000.f;
